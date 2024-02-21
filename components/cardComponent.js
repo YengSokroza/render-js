@@ -1,12 +1,12 @@
 export const cardComponent = (product) => {
     return `
     <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-        <img class="p-8 rounded-t-lg" src="${product?.image} || "|| "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Fimage-preview-icon-picture-placeholder-vector-31284806&psig=AOvVaw0tePq2nNsNRRywqM9adsBk&ust=1708483622094000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqGAoTCNCR2MzzuIQDFQAAAAAdAAAAABC8Ag"" alt="product image" />
+    <a href="#" class="block w-[200px] h-[200px] overflow-hidden">
+        <img class="p-8 rounded-t-lg" src=${product?.image || "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Fimage-preview-icon-picture-placeholder-vector-31284806&psig=AOvVaw0tePq2nNsNRRywqM9adsBk&ust=1708483622094000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqGAoTCNCR2MzzuIQDFQAAAAAdAAAAABC8Ag" }  alt="product image" />
     </a>
     <div class="px-5 pb-5">
         <a href="#">
-            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">${product?.title} || "Untitle "</h5>
+            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">${product?.title || "Untitle" }  </h5>
         </a>
             <div class="flex items-center mt-2.5 mb-5">
                 <div class="flex items-center space-x-1 rtl:space-x-reverse">
@@ -29,7 +29,7 @@ export const cardComponent = (product) => {
                 <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
             </div>
             <div class="flex items-center justify-between">
-                <span class="text-3xl font-bold text-gray-900 dark:text-white">${product?.price} || "Unavailable"</span>
+                <span class="text-3xl font-bold text-gray-900 dark:text-white">$${product?.price || "unavailable"} </span>
                 <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
             </div>
     </div>
